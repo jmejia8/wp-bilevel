@@ -61,7 +61,7 @@ endif;
 
         $args = array(
             'post_type' => 'bilevel_code',
-            'posts_per_page' => 6
+            'posts_per_page' => 8
         );
 
         $loop = new WP_Query( $args );
