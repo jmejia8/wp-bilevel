@@ -9,4 +9,4 @@
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Text Domain: Bi-level
 
-<img src="https://www.candaana.com/report/wp-content/themes/wp-bilevel/screenshot.png"/>  
+<img src="https://bi-level.org/wp-content/themes/wp-bilevel/screenshot.png"/>  
