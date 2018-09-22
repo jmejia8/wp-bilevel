@@ -140,7 +140,7 @@ endif;
         </div>
     </section>
 
-    <section class="section-community">
+<!--     <section class="section-community">
         <h1 class="main-h1">Community</h1>
         
         <div class="card-profile">
@@ -156,7 +156,7 @@ endif;
         <div class="center">
             <a class="btn-light" href="#">See all</a>
         </div>
-    </section>
+    </section> -->
 </article>
 </div>
 <!-- ================================================= -->
