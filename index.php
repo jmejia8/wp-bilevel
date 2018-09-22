@@ -60,12 +60,29 @@ endif;
         <h1 class="main-h1">Latest Algorithms</h1>
 
         <div class="cards">
-            <div class="card">
-                <div class="img" style="background: url(../img/card-img.jpg) no-repeat center; background-size: 100% auto;"></div>
-                <h3>BCA</h3>
-                <p>BCA is  an Algorithm for unconstrained bi-level optimization </p>
-                <a class="btn-green" href="#">Download</a>
-            </div>
+
+            <?php
+            ////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////
+            // start loop 
+            while (have_posts()) : the_post();
+            ?>
+            
+                <div class="card">
+                    <div class="img" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'thumbnail'); ?>) no-repeat center; background-size: 100% auto;"></div>
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_excerpt(); ?>
+                    <a class="btn-green" href="<?php echo get_permalink(); ?>">Download</a>
+                </div>
+
+            <?php 
+            ////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////
+            // end loop
+            endwhile;
+            ?>
 
         </div>
 

@@ -91,16 +91,38 @@ get_header();
             // start loop 
             while (have_posts()) : the_post();
             ?>
-                <div>
+
+                <div <?php post_class('row') ?>>
                     <div class="imsc">
                         <?php echo get_the_post_thumbnail($loop->ID, 'gaming-featured-image');?>
                     </div>
-                    <div class="abstract">
-                        <h4><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h4>
-                        <p><?php the_excerpt(); ?></p>
+                    <section>
+                        <a href="<?php echo get_permalink(); ?>">
+                            <h2>
+                                <?php the_title(); ?>
+                            </h2>
+                        </a>
 
-                    </div>
+                        <div class="post-info">
+                            <a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
+                                <i class="fa fa-calendar"></i>
+                                <?php echo get_the_date(); ?>
+                            </a>
+
+                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>">
+                                <i class="fa fa-user"></i>
+                                <?php the_author(); ?>
+                            </a>
+                        </div>
+
+                        <?php the_excerpt(); ?>
+                        <a href="<?php echo get_permalink(); ?>" class="btn-default">
+                            <?php _e('Seguir leyendo', 'gaming') ?>
+                        </a>
+                    </section>
                 </div>
+
+                <hr>
             <?php 
             // end loop
             endwhile;

@@ -5,6 +5,11 @@ get_header();
 
 ?>
 
+<div class="post content">
+<article>
+
+<section class="section-post">
+
 <center>
 	<h1><span class="red">Professional</span> Search</h1>
 </center>
@@ -22,33 +27,30 @@ get_header();
 	$the_query = new WP_Query( $args );
 	
 	if ( strlen($s) != 0 & $the_query->have_posts() ) {
-	        _e("<h2><span class='red'>Search Results for: </span> ".get_query_var('s')."</h2>");
+	        _e("<center><h2><span class='red'>Search Results for: </span> ".get_query_var('s')."</h2></center>");
 
 ?>
-<div class="archive">
+
+<div>
+	<div class="section-content" >
+
+
 <?php
 	        while ( $the_query->have_posts() ) {
 	           $the_query->the_post();
 ?>
 
 
-	<article <?php post_class('row') ?>>
-		<div class="img">
-			<?php 
-				if (has_post_thumbnail()) {
-					the_post_thumbnail('large');
-				}
-			?>
-		</div>
-
-
+	<div <?php post_class('row') ?>>
+		<div class="imsc">
+            <?php echo get_the_post_thumbnail($loop->ID, 'gaming-featured-image');?>
+        </div>
 		<section>
-			<h2>
-				<a href="<?php echo get_permalink(); ?>">
+			<a href="<?php echo get_permalink(); ?>">
+				<h2>
 					<?php the_title(); ?>
-				</a>
-
-			</h2>
+				</h2>
+			</a>
 
 			<div class="post-info">
 				<a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
@@ -64,10 +66,10 @@ get_header();
 
 			<?php the_excerpt(); ?>
 			<a href="<?php echo get_permalink(); ?>" class="btn-default">
-				<?php _e('Seguir leyendo', 'gaming') ?>
+				<?php _e('Read more', 'gaming') ?>
 			</a>
 		</section>
-	</article>
+	</div>
 
 	<hr>
 
@@ -87,9 +89,20 @@ get_header();
 </div>
 <?php 
 } ?>
-</div>
-<?php
 
+</section>
+    <aside class="tools">
+        <?php if ( is_active_sidebar( 'sidebar-posts' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar-posts' ); ?>
+        <?php endif; ?>  
+    </aside>
+</article>
+
+
+
+</div>
+
+<?php 
 
 get_footer();
 ?>
