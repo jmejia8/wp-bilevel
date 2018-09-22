@@ -483,10 +483,20 @@ a.btn-menu{
 
 .imsc{
     max-height: 300px;
+    width: auto;
     overflow: hidden;
 }
 
 .imsc img{
     width: 100%;
+    height: auto;
+}
 
+hr{
+    border: 2px solid #E3E3E3;
+}
+
+.post li{
+    font-family: Libre Baskerville;
+    margin-bottom: 13px;
 }
