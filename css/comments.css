@@ -307,3 +307,23 @@ p.form-submit{
 	padding: 20px;
 	text-align: center;
 }
+
+/*404*/
+
+.error-container{
+	text-align: center;
+	margin-top: 50px;
+}
+.error-container p{
+	color: #484848;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.error-no-found{
+	font-size: 60pt;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #9A9A9A;
+}

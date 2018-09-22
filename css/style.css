@@ -291,18 +291,23 @@ footer{
 
 .card-post{
     width: 45%;
-    max-height: 300px;
+    height: 300px;
     vertical-align: bottom;
     margin-left: 37px; 
     margin-bottom: 40px;
 }
 .card-post .img{
     width: 45%;
-    height: auto;
-    /*background: gray;*/
+    height: 100%;
     display: inline-block;
-    vertical-align: top;
     overflow: hidden;
+    vertical-align: middle;
+}
+
+.card-post .img img{
+    height: 100%;
+    width: auto;
+    /*transform: rotate(-90deg);*/
 }
 
 .card-post .abstract{
