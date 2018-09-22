@@ -19,7 +19,7 @@ get_header();
 	get_search_form();
 
 	$s=get_search_query();
-	$args = array('post_type' => 'post',
+	$args = array('post_type' => ['post', 'bilevel_code'],
 	                's' =>$s
 	            );
 	
@@ -43,7 +43,7 @@ get_header();
 
 	<div <?php post_class('row') ?>>
 		<div class="imsc">
-            <?php echo get_the_post_thumbnail($loop->ID, 'gaming-featured-image');?>
+            <?php echo get_the_post_thumbnail($loop->ID, 'bilevel-featured-image');?>
         </div>
 		<section>
 			<a href="<?php echo get_permalink(); ?>">
@@ -66,7 +66,7 @@ get_header();
 
 			<?php the_excerpt(); ?>
 			<a href="<?php echo get_permalink(); ?>" class="btn-default">
-				<?php _e('Read more', 'gaming') ?>
+				<?php _e('Read more', 'bilevel') ?>
 			</a>
 		</section>
 	</div>
@@ -82,11 +82,15 @@ get_header();
 	}else{
 ?>
 
-<h2>Nothing Found</h2>
+<center>
+	<h2>Nothing Found</h2>
 
-<div>
-	<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
-</div>
+	<div>
+		<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+	</div>
+</center>
+
+
 <?php 
 } ?>
 

@@ -7,7 +7,7 @@ get_header();
 
 <?php 
 $args = array(
-    'post_type' => 'gaming_slider',
+    'post_type' => 'bilevel_slider',
     'posts_per_page' => 3
 );
 
@@ -25,8 +25,8 @@ if ($loop->have_posts()) :
             $loop->the_post();
         ?>
 
-            <div class="content-banner" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'gaming-featured-image'); ?>) no-repeat center; background-size: 100% auto;">
-                <!-- get_the_post_thumbnail($loop->ID, 'gaming-featured-image'); -->
+            <div class="content-banner" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'bilevel-featured-image'); ?>) no-repeat center; background-size: 100% auto;">
+                <!-- get_the_post_thumbnail($loop->ID, 'bilevel-featured-image'); -->
                 <div class="text"> 
                     <div>
                         <?php the_title( "<h2>", "</h2>" ); ?>
@@ -57,6 +57,17 @@ endif;
 
 <article>
     <section class="section-code">
+        <?php
+
+        $args = array(
+            'post_type' => 'bilevel_code',
+            'posts_per_page' => 6
+        );
+
+        $loop = new WP_Query( $args );
+
+        if ($loop->have_posts()) : 
+        ?>
         <h1 class="main-h1">Latest Algorithms</h1>
 
         <div class="cards">
@@ -65,12 +76,14 @@ endif;
             ////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////
+
             // start loop 
-            while (have_posts()) : the_post();
+            for ($i=0; $loop->have_posts(); $i++) {
+                $loop->the_post();
             ?>
             
                 <div class="card">
-                    <div class="img" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'thumbnail'); ?>) no-repeat center; background-size: 100% auto;"></div>
+                    <div class="img" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'bilevel-code-image'); ?>) no-repeat center; background-size: 100% auto;"></div>
                     <h3><?php the_title(); ?></h3>
                     <?php the_excerpt(); ?>
                     <a class="btn-green" href="<?php echo get_permalink(); ?>">Download</a>
@@ -81,14 +94,19 @@ endif;
             ////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////
             // end loop
-            endwhile;
+            };
             ?>
+
 
         </div>
 
         <div class="center">
             <a class="btn-light" href="#">See all</a>
         </div>
+
+        <?php
+        endif;
+        ?>
         
     </section>
 
@@ -101,7 +119,7 @@ endif;
         ?>
             <div class="card-post">
                 <div class="img">
-                    <?php echo get_the_post_thumbnail($loop->ID, 'gaming-featured-image');?>
+                    <?php echo get_the_post_thumbnail($loop->ID, 'bilevel-tutorial-image');?>
                 </div>
                 <div class="abstract">
                     <h4><?php the_title(); ?></h4>

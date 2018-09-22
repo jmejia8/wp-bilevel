@@ -5,14 +5,16 @@
 add_theme_support( 'post-thumbnails' );
 
 
-add_image_size( 'gaming-featured-image', 1280, 720, true );
-add_image_size( 'gaming-thumbnail-image', 100, 100, true );
+add_image_size( 'bilevel-featured-image', 1280, 720, true );
+add_image_size( 'bilevel-thumbnail-image', 100, 100, true );
+add_image_size( 'bilevel-code-image', 250, 120, true );
+add_image_size( 'bilevel-tutorial-image', 350, 260, true );
 
 register_nav_menus(
 	array(
-		'top'    => __('Top Menu', 'gaming'),
-		'footer' => __('Footer Menu', 'gaming'),
-		'console' => __('Console Menu', 'gaming'),
+		'top'    => __('Top Menu', 'bilevel'),
+		'footer' => __('Footer Menu', 'bilevel'),
+		'console' => __('Console Menu', 'bilevel'),
 	)
 );
 
@@ -25,8 +27,8 @@ register_nav_menus(
  * Register post types: https://codex.wordpress.org/Function_Reference/register_post_type
  * Icons: https://developer.wordpress.org/resource/dashicons/
  */
-function gaming_post_type() {
- 	register_post_type( 'gaming_slider',
+function bilevel_post_type() {
+ 	register_post_type( 'bilevel_slider',
  		array(
 	      'labels' => array(
 	        'name' => __( 'Carousel' ),
@@ -48,17 +50,42 @@ function gaming_post_type() {
   	);
  }
 
- add_action( 'init', 'gaming_post_type' );
+ add_action( 'init', 'bilevel_post_type' );
+
+ function bilevel_code_type() {
+ 	register_post_type( 'bilevel_code',
+ 		array(
+	      'labels' => array(
+	        'name' => __( 'Algorithms' ),
+	        'singular_name' => __( 'Algorithm' ),
+	        'add_new' => __( 'New Algorithm' ),
+	        'add_new_item' => __( 'Add New Algorithm' ),
+	        'edit_item' => __( 'Edit Algorithm' ),
+	        'featured_image' => __( 'Image of Algorithm' )
+	      ),
+	      'rewrite' => array('slug' => 'algoritms'),
+	      'public' => true,
+	      'exclude_from_search' => false,
+	      'has_archive' => false,
+	      'show_in_nav_menus' => true,
+	      'menu_icon' => 'dashicons-upload',
+	      // 'supports' => array('title', 'editor', 'thumbnail')
+
+    	)
+  	);
+ }
+
+ add_action( 'init', 'bilevel_code_type' );
  
 
  // Register sidebars
-add_action( 'widgets_init', 'gamingWidgetsInit' );
+add_action( 'widgets_init', 'bilevelWidgetsInit' );
 
-function gamingWidgetsInit() {
+function bilevelWidgetsInit() {
     register_sidebar( array(
-        'name' => __( 'Posts sidebar', 'gaming' ),
+        'name' => __( 'Posts sidebar', 'bilevel' ),
         'id' => 'sidebar-posts',
-        'description' => __( 'Widgets in this area will be shown on all posts.', 'gaming' ),
+        'description' => __( 'Widgets in this area will be shown on all posts.', 'bilevel' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget'  => '</div>',
 	'before_title'  => '<h2 class="widgettitle">',
@@ -75,15 +102,15 @@ function move_comment_field( $fields ) {
 
 add_filter( 'comment_form_fields', 'move_comment_field' );
 
-function gaming_comment( $comment, $args, $depth ) {
+function bilevel_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 			?>
 		    <li class="comment">
-		        <p><?php _e( 'Pingback:', 'gaming' ); ?> <?php comment_author_link(); ?>
-		        	<?php edit_comment_link( __( '(Edit)', 'gaming' ), ' ' ); ?></p>
+		        <p><?php _e( 'Pingback:', 'bilevel' ); ?> <?php comment_author_link(); ?>
+		        	<?php edit_comment_link( __( '(Edit)', 'bilevel' ), ' ' ); ?></p>
 		    	<?php
 		    break;
 
@@ -101,7 +128,7 @@ function gaming_comment( $comment, $args, $depth ) {
 
 
 			                    <?php
-			                    printf( __( '<b class="fn">%s</b>', 'gaming' ),
+			                    printf( __( '<b class="fn">%s</b>', 'bilevel' ),
 		                    	sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) );
 		                    	?>
 		                    	<?php comment_text(); ?>
@@ -112,13 +139,13 @@ function gaming_comment( $comment, $args, $depth ) {
 			                                <?php
 			                                /* translators: 1: date, 2: time */
 			                                printf(
-			                                	__( '%1$s at %2$s', 'gaming' ),
+			                                	__( '%1$s at %2$s', 'bilevel' ),
 			                                	get_comment_date(),
 			                                	get_comment_time() );
 			                                ?>
 			                            </time>
 			                        </a>
-			                        <?php edit_comment_link( __( '(Edit)', 'gaming' ), ' ' ); ?>
+			                        <?php edit_comment_link( __( '(Edit)', 'bilevel' ), ' ' ); ?>
 		                    	</div>
 	                    	</div>
 
@@ -127,7 +154,7 @@ function gaming_comment( $comment, $args, $depth ) {
 	                    	</div>
 
 	                    	<?php if ( $comment->comment_approved == '0' ) : ?>
-	                    		<em><?php _e( 'Your comment is awaiting moderation.', 'gaming' ); ?></em>
+	                    		<em><?php _e( 'Your comment is awaiting moderation.', 'bilevel' ); ?></em>
 	                    	<?php endif; ?>
 
 		                </div>
@@ -140,17 +167,17 @@ function gaming_comment( $comment, $args, $depth ) {
 }
 
 /* Change Excerpt length */
-function gaming_excerpt_length( $length ) {
+function bilevel_excerpt_length( $length ) {
 	return 30;
 }
 
-add_filter( 'excerpt_length', 'gaming_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'bilevel_excerpt_length', 999 );
 
 function my_login_logo_one() { 
 	?> 
 	<style type="text/css"> 
 	body.login div#login h1 a {
-	background-image: url(<?php bloginfo('template_url');?>/img/logo.png);  
+	background-image: url(<?php bloginfo('template_url');?>/img/logo-100.png);  
 	background-position: center;
 	background-color: #E6E6E6;
 	border: 1px solid #C0C0C0;

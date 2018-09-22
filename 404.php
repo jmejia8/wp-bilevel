@@ -1,21 +1,25 @@
 <?php
 get_header(); ?>
 
-<article <?php post_class(); ?> >
+<div class="post content">
+<article>
 
-	<section class="single-content">
-		<div class="error-container">
-			<h1><?php _e( 'Página no encontrada', 'report' ); ?></h1>
-			<div class="error-no-found">404</div>
-			<p>
-				<?php
-					_e( 'El contiendo no está disponible.', 'report' ); 
-				?>
-			</p>
-		</div>
-		<hr>
+<section class="section-post">
 
-	<h1><span class="red">Últimos</span> Reportes</h1>
+	<div class="error-container">
+		<h1><?php _e( 'Page not found.', 'report' ); ?></h1>
+		<div class="error-no-found">404</div>
+		<p>
+			<?php
+				_e( 'Content not avalaible or removed.', 'report' ); 
+			?>
+		</p>
+	</div>
+	<hr>
+
+<center>
+	<h1><span class="red">Last</span> Content</h1>
+</center>
 
 
 <?php 
@@ -30,24 +34,16 @@ $loop = new WP_Query( $args );
 	           $loop->the_post();
 ?>
 
-
-	<article <?php post_class('row') ?>>
-		<div class="img">
-			<?php 
-				if (has_post_thumbnail()) {
-					the_post_thumbnail('large');
-				}
-			?>
-		</div>
-
-
+	<div <?php post_class('row') ?>>
+		<div class="imsc">
+            <?php echo get_the_post_thumbnail($loop->ID, 'bilevel-featured-image');?>
+        </div>
 		<section>
-			<h2>
-				<a href="<?php echo get_permalink(); ?>">
+			<a href="<?php echo get_permalink(); ?>">
+				<h2>
 					<?php the_title(); ?>
-				</a>
-
-			</h2>
+				</h2>
+			</a>
 
 			<div class="post-info">
 				<a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
@@ -63,20 +59,26 @@ $loop = new WP_Query( $args );
 
 			<?php the_excerpt(); ?>
 			<a href="<?php echo get_permalink(); ?>" class="btn-default">
-				<?php _e('Seguir leyendo', 'gaming') ?>
+				<?php _e('Read more', 'gaming') ?>
 			</a>
 		</section>
-	</article>
+	</div>
 
 	<hr>
+
 <?php } ?>
-		</section>
-	<aside class="single-aside">
-		<?php if ( is_active_sidebar( 'sidebar-posts' ) ) : ?>
-			<?php dynamic_sidebar( 'sidebar-posts' ); ?>
-		<?php endif; ?>  
-	</aside>
+
+</section>
+    <aside class="tools">
+        <?php if ( is_active_sidebar( 'sidebar-posts' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar-posts' ); ?>
+        <?php endif; ?>  
+    </aside>
 </article>
+
+
+
+</div>
 
 <?php
 get_footer(); ?>

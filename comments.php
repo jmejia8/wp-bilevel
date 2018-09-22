@@ -11,27 +11,27 @@ if ( post_password_required() ) {
 	<?php
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php echo __( 'Post comments', 'gaming' ); ?>
+			<?php echo __( 'Post comments', 'bilevel' ); ?>
 		</h2>
 
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
 					'type'  => 'comment',
-					'callback'  => 'gaming_comment',
+					'callback'  => 'bilevel_comment',
 				) );
 			?>
 		</ol>
 
 		<?php the_comments_pagination( array(
-			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'gaming' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'gaming' ) . '</span>',
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'bilevel' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'bilevel' ) . '</span>',
 		) );
 
 	endif;
 
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'gaming' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'bilevel' ); ?></p>
 	<?php
 	endif;
 
@@ -41,19 +41,19 @@ if ( post_password_required() ) {
 
 	$fields =  array(
 	  'author' =>
-	    '<div class="row"><p class="comment-form-author col-sm-4"><label for="author">' . __( 'Name', 'gaming' ) . '</label> ' .
+	    '<div class="row"><p class="comment-form-author col-sm-4"><label for="author">' . __( 'Name', 'bilevel' ) . '</label> ' .
 	    ( $req ? '<span class="required">*</span>' : '' ) .
 	    '<input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) .
 	    '" size="30"' . $aria_req . ' /></p>',
 
 	  'email' =>
-	    '<p class="comment-form-email col-sm-4"><label for="email">' . __( 'Email', 'gaming' ) . '</label> ' .
+	    '<p class="comment-form-email col-sm-4"><label for="email">' . __( 'Email', 'bilevel' ) . '</label> ' .
 	    ( $req ? '<span class="required">*</span>' : '' ) .
 	    '<input id="email" name="email" type="text" class="form-control" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 	    '" size="30"' . $aria_req . ' /></p>',
 
 	  'url' =>
-	    '<p class="comment-form-url col-sm-4"><label for="url">' . __( 'Website', 'gaming' ) . '</label>' .
+	    '<p class="comment-form-url col-sm-4"><label for="url">' . __( 'Website', 'bilevel' ) . '</label>' .
 	    '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) .
 	    '" size="30" /></p></div>',
 	);

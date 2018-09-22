@@ -15,7 +15,7 @@ get_header();
     <h1 class="main-h1">
         <span class="red">
             <i class="fa fa-tags"></i>
-            <?php _e('Categoría:', 'gaming'); ?>
+            <?php _e('Category:', 'bilevel'); ?>
                 
         </span>
         <?php single_cat_title(); ?>
@@ -27,7 +27,7 @@ get_header();
     <h1 class="main-h1">
         <span class="red">
             <i class="fa fa-tag"></i>
-            <?php _e('Etiqueta:', 'gaming'); ?>
+            <?php _e('Tag:', 'bilevel'); ?>
         </span> <?php single_tag_title(); ?>
     </h1>
     
@@ -69,7 +69,7 @@ get_header();
     <h1 class="main-h1">
         <span class="red">
             <i class="fa fa-calendar"></i>
-            <?php _e('Entradas del ', 'gaming'); ?>
+            <?php _e('Entradas del ', 'bilevel'); ?>
         </span>
 
         <?php 
@@ -94,7 +94,7 @@ get_header();
 
                 <div <?php post_class('row') ?>>
                     <div class="imsc">
-                        <?php echo get_the_post_thumbnail($loop->ID, 'gaming-featured-image');?>
+                        <?php echo get_the_post_thumbnail($loop->ID, 'bilevel-featured-image');?>
                     </div>
                     <section>
                         <a href="<?php echo get_permalink(); ?>">
@@ -117,7 +117,7 @@ get_header();
 
                         <?php the_excerpt(); ?>
                         <a href="<?php echo get_permalink(); ?>" class="btn-default">
-                            <?php _e('Seguir leyendo', 'gaming') ?>
+                            <?php _e('Seguir leyendo', 'bilevel') ?>
                         </a>
                     </section>
                 </div>
