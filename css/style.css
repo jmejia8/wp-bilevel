@@ -378,6 +378,7 @@ footer{
 .section-post p{
     text-align: justify;
     font-family: 'Lora', sans-serif;
+    overflow-x: auto;
 }
 
 .section-post p,
