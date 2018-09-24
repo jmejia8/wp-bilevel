@@ -33,9 +33,8 @@ get_header();
     
     <?php } ?>
 
-    <?php // http://www.example.com/tag/custom-tag
+    <?php 
     if (is_author()) { 
-    // $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
     ?>
 
         <div class="vcard">
@@ -44,13 +43,18 @@ get_header();
                         echo " ";
                         the_author_meta('user_lastname'); ?></h2>
             <div class="profile-info">
-                <div class="img" style="background: url(<?php echo get_avatar_url( get_the_author_meta('ID'), 100); ?>) no-repeat center; background-size: 100% auto;"></div>
+                <div class="img" style="background: url(<?php echo get_avatar_url( get_the_author_meta('ID'), array("size"=>200)); ?>) no-repeat center; background-size: 100% auto;"></div>
                 
                 <div class="text">
                     <ul class="fa-ul">
-                        <li><span class="fa-li" ><i class="fas fa-school"></i></span> University of Memeology</li>
-                        <li><span class="fa-li" ><i class="fas fa-envelope"></i></span> benito@camelo.com</li>
-                        <li><span class="fa-li" ><i class="fas fa-map-marker-alt"></i></span> Africam Safary</li>
+                        <li><span class="fa-li" ><i class="fas fa-school"></i></span>
+                            <a href="<?php echo get_the_author_meta('url') ?>"><?php echo get_the_author_meta('url') ?></a>
+                        </li>
+                        <li><span class="fa-li" ><i class="fas fa-envelope"></i></span> 
+                            <?php echo get_the_author_meta('email') ?>
+                        </li>
+                     <!--    <li><span class="fa-li" ><i class="fas fa-map-marker-alt"></i></span> 
+                        </li> -->
                     </ul>
                     </div>
             </div>
@@ -69,7 +73,7 @@ get_header();
     <h1 class="main-h1">
         <span class="red">
             <i class="fa fa-calendar"></i>
-            <?php _e('Entradas del ', 'bilevel'); ?>
+            <?php _e('Entries from ', 'bilevel'); ?>
         </span>
 
         <?php 
@@ -117,7 +121,7 @@ get_header();
 
                         <?php the_excerpt(); ?>
                         <a href="<?php echo get_permalink(); ?>" class="btn-default">
-                            <?php _e('Seguir leyendo', 'bilevel') ?>
+                            <?php _e('Read more...', 'bilevel') ?>
                         </a>
                     </section>
                 </div>
