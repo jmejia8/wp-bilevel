@@ -69,7 +69,7 @@ function bilevel_post_type() {
 	      'has_archive' => false,
 	      'show_in_nav_menus' => true,
 	      'menu_icon' => 'dashicons-upload',
-	      // 'supports' => array('title', 'editor', 'thumbnail')
+	      'supports' => array('title', 'editor', 'thumbnail', 'author')
 
     	)
   	);

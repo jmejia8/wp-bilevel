@@ -85,7 +85,7 @@ get_header();
 <center>
 	<h2>Nothing Found</h2>
 
-	<div>
+	<div class="searchform">
 		<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
 	</div>
 </center>

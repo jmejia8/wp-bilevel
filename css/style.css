@@ -428,6 +428,7 @@ aside.tools{
 .widget{
     margin-left: 15px;
     margin-bottom: 25px;
+    padding-bottom: 8px;
 }
 .widget p, .widget h2{
     font-family: 'Roboto', sans-serif;
