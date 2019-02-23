@@ -57,13 +57,13 @@ function bilevel_post_type() {
  		array(
 	      'labels' => array(
 	        'name' => __( 'Algorithms' ),
-	        'singular_name' => __( 'Algorithm' ),
-	        'add_new' => __( 'New Algorithm' ),
-	        'add_new_item' => __( 'Add New Algorithm' ),
-	        'edit_item' => __( 'Edit Algorithm' ),
-	        'featured_image' => __( 'Image of Algorithm' )
+	        'singular_name' => __( 'Aviso' ),
+	        'add_new' => __( 'Crear Aviso' ),
+	        'add_new_item' => __( 'Agregar Nuevo Aviso' ),
+	        'edit_item' => __( 'Editar Aviso' ),
+	        'featured_image' => __( 'Imagen del Aviso' )
 	      ),
-	      'rewrite' => array('slug' => 'algoritms'),
+	      'rewrite' => array('slug' => 'avisos'),
 	      'public' => true,
 	      'exclude_from_search' => false,
 	      'has_archive' => false,

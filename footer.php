@@ -1,6 +1,6 @@
 
     <footer>
-        &copy; 2018 Bi-level Optimization
+        El Blog del CIIA &copy; 2019
         <?php wp_footer(); ?>
     </footer>
 </body>

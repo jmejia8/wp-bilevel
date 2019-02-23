@@ -63,7 +63,7 @@ get_header();
             </div>
         </div>
 
-        <h1 class="main-h1">Latest Posts</h1>
+        <h1 class="main-h1">Sus Publicaciones Recientes</h1>
 
     
     <?php } ?>
@@ -73,7 +73,7 @@ get_header();
     <h1 class="main-h1">
         <span class="red">
             <i class="fa fa-calendar"></i>
-            <?php _e('Entries from ', 'bilevel'); ?>
+            <?php _e('Publicaciones de ', 'bilevel'); ?>
         </span>
 
         <?php 
@@ -121,7 +121,7 @@ get_header();
 
                         <?php the_excerpt(); ?>
                         <a href="<?php echo get_permalink(); ?>" class="btn-default">
-                            <?php _e('Read more...', 'bilevel') ?>
+                            <?php _e('Leer más...', 'bilevel') ?>
                         </a>
                     </section>
                 </div>

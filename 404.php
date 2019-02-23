@@ -7,18 +7,18 @@ get_header(); ?>
 <section class="section-post">
 
 	<div class="error-container">
-		<h1><?php _e( 'Page not found.', 'report' ); ?></h1>
+		<h1><?php _e( 'Contenido no encontrado.', 'report' ); ?></h1>
 		<div class="error-no-found">404</div>
 		<p>
 			<?php
-				_e( 'Content not avalaible or removed.', 'report' ); 
+				_e( 'Contenido no disponible o borrado.', 'report' ); 
 			?>
 		</p>
 	</div>
 	<hr>
 
 <center>
-	<h1><span class="red">Last</span> Content</h1>
+	<h1><span class="red">Más</span> Contenido</h1>
 </center>
 
 

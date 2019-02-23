@@ -11,7 +11,7 @@ get_header();
 <section class="section-post">
 
 <center>
-	<h1><span class="red">Professional</span> Search</h1>
+	<h1><span class="red">Buscar</span> Contenido</h1>
 </center>
 
 
@@ -27,7 +27,7 @@ get_header();
 	$the_query = new WP_Query( $args );
 	
 	if ( strlen($s) != 0 & $the_query->have_posts() ) {
-	        _e("<center><h2><span class='red'>Search Results for: </span> ".get_query_var('s')."</h2></center>");
+	        _e("<center><h2><span class='red'>Resultados de: </span> ".get_query_var('s')."</h2></center>");
 
 ?>
 
@@ -66,7 +66,7 @@ get_header();
 
 			<?php the_excerpt(); ?>
 			<a href="<?php echo get_permalink(); ?>" class="btn-default">
-				<?php _e('Read more', 'bilevel') ?>
+				<?php _e('Seguir leyendo', 'bilevel') ?>
 			</a>
 		</section>
 	</div>
@@ -83,10 +83,10 @@ get_header();
 ?>
 
 <center>
-	<h2>Nothing Found</h2>
+	<h2>Sin resultados</h2>
 
 	<div class="searchform">
-		<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+		<p>Lo sentimos, no se ha encontrado algún resultado. Intenta usando otras palabras.</p>
 	</div>
 </center>
 

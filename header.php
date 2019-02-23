@@ -51,7 +51,7 @@
         <div class="band">
             <div class="wrap">
                     <img src="<?php bloginfo('template_url');?>/img/logo-100.png" alt="Logo">
-                    <h1>Bi-level Optimization</h1>
+                    <h1>Blog del CIIA</h1>
             </div>
         </div>
         <!-- /header -->

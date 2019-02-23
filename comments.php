@@ -11,7 +11,7 @@ if ( post_password_required() ) {
 	<?php
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
-			<?php echo __( 'Post comments', 'bilevel' ); ?>
+			<?php echo __( 'Comentarios', 'bilevel' ); ?>
 		</h2>
 
 		<ol class="comment-list">
@@ -24,14 +24,14 @@ if ( post_password_required() ) {
 		</ol>
 
 		<?php the_comments_pagination( array(
-			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'bilevel' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'bilevel' ) . '</span>',
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Anterior', 'bilevel' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Siguiente', 'bilevel' ) . '</span>',
 		) );
 
 	endif;
 
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'bilevel' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comentarios cerrados.', 'bilevel' ); ?></p>
 	<?php
 	endif;
 
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 
 	$fields =  array(
 	  'author' =>
-	    '<div class="row"><p class="comment-form-author col-sm-4"><label for="author">' . __( 'Name', 'bilevel' ) . '</label> ' .
+	    '<div class="row"><p class="comment-form-author col-sm-4"><label for="author">' . __( 'Nombre', 'bilevel' ) . '</label> ' .
 	    ( $req ? '<span class="required">*</span>' : '' ) .
 	    '<input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) .
 	    '" size="30"' . $aria_req . ' /></p>',
@@ -64,25 +64,25 @@ if ( post_password_required() ) {
 	  'id_submit'         => 'submit',
 	  'class_submit'      => 'submit btn btn-default',
 	  'name_submit'       => 'submit',
-	  'title_reply'       => __( 'Leave a Reply' ),
-	  'title_reply_to'    => __( 'Leave a Reply to %s' ),
-	  'cancel_reply_link' => __( 'Cancel Reply' ),
-	  'label_submit'      => __( 'Post Comment' ),
+	  'title_reply'       => __( '¿Dudas?' ),
+	  'title_reply_to'    => __( 'Responder a %s' ),
+	  'cancel_reply_link' => __( 'Cancelar' ),
+	  'label_submit'      => __( 'Agregar Comentario' ),
 	  'format'            => 'xhtml',
 
-	  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+	  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comentario', 'noun' ) .
 	    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control">' .
 	    '</textarea></p>',
 
 	  'must_log_in' => '<p class="must-log-in">' .
 	    sprintf(
-	      __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+	      __( 'Debes <a href="%s">iniciar sesión</a> para comentar.' ),
 	      wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
 	    ) . '</p>',
 
 	  'logged_in_as' => '<p class="logged-in-as">' .
 	    sprintf(
-	    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+	    __( 'Iniciaste sesión como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">¿No eres tú?</a>' ),
 	      admin_url( 'profile.php' ),
 	      $user_identity,
 	      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
@@ -94,7 +94,7 @@ if ( post_password_required() ) {
 
 	  'comment_notes_after' => '<p class="form-allowed-tags">' .
 	    sprintf(
-	      __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ),
+	      __( 'Puedes usar las siguientes etiquetas <abbr title="HyperText Markup Language">HTML</abbr>: %s' ),
 	      ' <code>' . allowed_tags() . '</code>'
 	    ) . '</p>',
 

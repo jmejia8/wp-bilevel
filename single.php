@@ -19,7 +19,7 @@
 					the_title( "<h1>", "</h1>" );
 				?>
                     <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>" title="Author"><?php the_author(); ?></a>
-                    on
+                    el
                     <a href="<?php echo get_day_link( get_the_time('Y') , get_the_time('m') , get_the_time('d') ); ?>">
 						<?php echo get_the_date(); ?>
 					</a>

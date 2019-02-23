@@ -31,7 +31,7 @@ if ($loop->have_posts()) :
                     <div>
                         <?php the_title( "<h2>", "</h2>" ); ?>
                         <p><?php the_content(); ?></p>
-                        <a href="#" class="btn-default">Go for it!</a>
+                        <a href="#" class="btn-default">Leer más</a>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ endif;
 
         if ($loop->have_posts()) : 
         ?>
-        <h1 class="main-h1">Latest Algorithms</h1>
+        <h1 class="main-h1">Últimos Avisos</h1>
 
         <div class="cards">
 
@@ -86,7 +86,7 @@ endif;
                     <div class="img" style="background: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'bilevel-code-image'); ?>) no-repeat center; background-size: 100% auto;"></div>
                     <h3><?php the_title(); ?></h3>
                     <?php the_excerpt(); ?>
-                    <a class="btn-green" href="<?php echo get_permalink(); ?>">Download</a>
+                    <a class="btn-green" href="<?php echo get_permalink(); ?>">Leer más</a>
                 </div>
 
             <?php 
@@ -101,7 +101,7 @@ endif;
         </div>
 
         <div class="center">
-            <a class="btn-light" href="#">See all</a>
+            <a class="btn-light" href="#">Ver todo</a>
         </div>
 
         <?php
@@ -111,7 +111,7 @@ endif;
     </section>
 
     <section class="section-tutorials">
-        <h1 class="main-h1">Latest Tutorials</h1>
+        <h1 class="main-h1">Publicaciones Recientes</h1>
 
         <?php
         // start loop 
@@ -125,7 +125,7 @@ endif;
                     <h4><?php the_title(); ?></h4>
                     <?php the_excerpt(); ?>
                     <div class="center">
-                        <a class="btn-default" href="<?php echo get_permalink(); ?>">read more...</a>
+                        <a class="btn-default" href="<?php echo get_permalink(); ?>">Seguir leyendo...</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@ endif;
 
 
         <div class="center">
-            <a class="btn-light" href="#">See all</a>
+            <a class="btn-light" href="#">Ver todo</a>
         </div>
     </section>
 
@@ -154,7 +154,7 @@ endif;
 
 
         <div class="center">
-            <a class="btn-light" href="#">See all</a>
+            <a class="btn-light" href="#">Ver todo</a>
         </div>
     </section> -->
 </article>
