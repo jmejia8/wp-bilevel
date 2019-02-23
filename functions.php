@@ -56,7 +56,7 @@ function bilevel_post_type() {
  	register_post_type( 'bilevel_code',
  		array(
 	      'labels' => array(
-	        'name' => __( 'Algorithms' ),
+	        'name' => __( 'Avisos' ),
 	        'singular_name' => __( 'Aviso' ),
 	        'add_new' => __( 'Crear Aviso' ),
 	        'add_new_item' => __( 'Agregar Nuevo Aviso' ),
