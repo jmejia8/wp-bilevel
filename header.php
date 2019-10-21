@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora|Roboto|Poppins" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+    <link rel="icon" href="<?php bloginfo('template_url');?>/favicon.ico" > 
+
 
 
 
@@ -31,10 +33,27 @@
             <div class="menu-container">
                 <div class="logo">
                     <a href="<?php echo get_site_url(); ?>">
-                    <img src="<?php bloginfo('template_url');?>/img/logo-64.png" alt="logo">
+                    <img src="<?php bloginfo('template_url');?>/img/logo-gray-64.png" alt="logo">
                     </a>
                 </div>
-                <a href="#" class="btn-menu" onclick="displayMenu()"><i class="fa fa-bars"></i></a>
+                <div class="btn-menu-wraper">
+                    <a href="#" class="btn-menu" onclick="displayMenu()"><i class="fa fa-bars"></i></a>
+                </div>
+                <div class="blog-title">
+                    <span>
+                    <?php bloginfo( 'name' ); ?>  <br>
+                    <small>
+                        <?php bloginfo( 'description' ); ?>
+                    </small>
+                    </span>
+                </div>
+                <div id="menu-wraper">
+                    <div class="seach-top-box">
+                        <form method="get">
+                            <input type="text" placeholder="Search" name="s">
+                            <button><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
                 <?php
 				wp_nav_menu(
 					array(
@@ -43,15 +62,10 @@
 					'container_class' => 'menu',
 					)
 				);
-			?>
+			     ?>
+                </div>
                 <div class="clear"></div>
             </div>
         </header>
 
-        <div class="band">
-            <div class="wrap">
-                    <img src="<?php bloginfo('template_url');?>/img/logo-100.png" alt="Logo">
-                    <h1>Bi-level Optimization</h1>
-            </div>
-        </div>
         <!-- /header -->

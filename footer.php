@@ -1,6 +1,6 @@
 
     <footer>
-        &copy; 2018 Bi-level Optimization
+        &copy; <?php echo date("Y"); ?> Bi-level Optimization
         <?php wp_footer(); ?>
     </footer>
 </body>
