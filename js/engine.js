@@ -16,6 +16,9 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
 
+  if (slides.length == 0) {
+    return;
+  }
 
   slides[slideIndex-1].style.display = "table";  
 }
@@ -30,7 +33,7 @@ function initSlides(){
 }
 
 function displayMenu() {
-  var menu = document.getElementById('menu-menu-principal');
+  var menu = document.getElementById('menu-wraper');
   console.log("sfasdfasdf");
   if (menu.style.display == 'block') {
     menu.style.display = 'none'
