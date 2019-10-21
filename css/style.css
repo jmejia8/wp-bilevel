@@ -12,7 +12,7 @@
 body{
     color: #343434;
     font-family: sans-serif;
-    background-color: #F8F8F8;
+    background-color: #F3F3F3;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -54,8 +54,9 @@ a{
     color: #1D6B9B;
 }
 
-a:hover{
-    /*border-bottom: 1px dotted #00409E*/;
+article a:hover{
+    color: #E04821;
+    /*border-bottom: 1px dotted #00409E;*/
 }
 
 div.right{
@@ -71,11 +72,12 @@ div.center{
 div.content, .menu-container{
     max-width: 1200px;
     margin: auto;
+    /*height: 200px;*/
 }
 
 div.content{
+    margin-top: 200px;
     background: white;
-    margin-top: 316px;
     border:1px solid #DCDCDC;
     margin-bottom: 50px;
     border-radius: 5px;
@@ -95,7 +97,7 @@ div.content{
 
 /*band*/
 div.band{
-    background: #D0D0D0;
+    /*background: #D0D0D0;*/
     right: 0;
     width: 100%;
     height: 400px;
@@ -118,7 +120,7 @@ div.band .wrap h1{
 
 /*header*/
 header.main{
-    background: #F4F4F4;
+    background: #0A61A3;
     -webkit-box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
     -moz-box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
     box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
@@ -131,26 +133,53 @@ header.main{
 
 /*menu*/
 
+nav.menu{
+    clear: both;
+    bottom: 0;
+    padding-top: 10px;
+}
+
 nav.menu li{
     display: inline-block;
 }
 
+nav.menu a, .logo a{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+
+}
+
+ul.menu{
+    padding:  0;
+}
+
+.logo{
+    display: block;
+}
+
+.logo img{
+    vertical-align: middle;
+}
 
 nav.menu a{
     display: block;
     font-family: 'Poppins', sans-serif;
-    padding: 20px 15px;
-    color: #000000;
-    border-bottom: 4px #F4F4F4 solid;
-
+    padding: 0 15px;
+    color: white;
+    /*border-bottom: 4px #F4F4F4 solid;*/
+    /*background: #00508D;*/
+    min-width: 100px;
+    font-weight: bold;
 }
 
 nav.menu a:hover,
 nav.menu a.active,
 nav.menu .current-menu-item a
 {
-    border-bottom: 4px #0A8CCD solid;
-
+    /*border-bottom: 4px #0A8CCD solid;*/
+    background: #0D4874;
+    /*color: black;*/
 }
 
 a.news-item:hover{
@@ -159,33 +188,92 @@ a.news-item:hover{
 
 .logo{
     float: left;
+    width: 50px;
 }
 
+
 .logo img{
-    width: 50px;
+    width: 100%;
     height: auto;
     margin-left: 10px;
     margin-top: 5px;
 }
 
-nav.menu{
-    float: right;
+header .blog-title{
+    float: left; 
+    margin-left: 30px;
+    color: white;
+    font-size: 14pt;
+    padding-top: 10px;
+    height: 70px;
 }
 
+.blog-title span{
+    /*line-height: 0px;*/
+    font-size: 15pt;
+    color: #D7D7D7;
+}
+.blog-title small{
+    color: #BEBEBE;
+    font-size: 11pt;
+    max-width: 300px;
+}
+
+nav.menu{
+    /*float: right;*/
+}
+
+
+
+.seach-top-box{
+    float: left;
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 40%;
+    min-width: 400px;
+}
+.seach-top-box form > button{
+    display: inline;
+    width: 11%;
+    border: none;
+    overflow: hidden;
+    background: transparent;
+}
+
+.seach-top-box form > input:focus{
+    border: none;
+}
+.seach-top-box form > input{
+    display: inline;
+    width: 85%;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 5px;
+    padding-left: 10px;
+}
+.seach-top-box form{
+    vertical-align: middle;
+    margin-left: 10px;
+    display: block;
+    background: white;
+    border-radius: 20px;
+}
 
 /*footer*/
 
 footer{
-    background: #D0D0D0;
+    background: #262631;
     height: 100px;
     padding-top: 40px;
     text-align: center;
-    color: #252525;
+    color: #EFEFEF;
 }
 
 /*banner*/
 .banner{
     position: relative;
+    background: #82CEF3;
 }
 .content-banner{
     overflow: hidden;
@@ -220,7 +308,7 @@ footer{
 /*buttons*/
 
 .btn-default, .btn-green, .btn-light, #searchsubmit{
-    background: #002B54;
+    background: #E04821;
     color: #FFFFFF !important;
     padding: 5px 15px;
     display: inline-block;
@@ -390,7 +478,7 @@ footer{
     font-family: 'Libre Baskerville', sans-serif;
 }
 .post{
-    margin-top: 100px !important;
+    /*margin-top: 100px !important;*/
     background: transparent!important;
     -webkit-box-shadow:none!important;
     -moz-box-shadow:none!important;
@@ -473,17 +561,27 @@ aside.tools{
 
 }
 
+a.btn-menu i{
+    color: white;
+}
+
+div.btn-menu-wraper{
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
 a.btn-menu{
     display: none;
-    float: right;
     width: 50px;
     height: 50px;
     text-align: center;
     border: #DADADA 1px solid;
     padding-top: 10px;
+    vertical-align: middle;
 
-    margin-right: 7px;
-    margin-top: 7px;
+    /*margin-right: 7px;
+    margin-top: 1px;*/
     border-radius: 5px;
 
 }
