@@ -10,13 +10,13 @@ get_header();
 
 <section class="section-post">
 
-<center>
+<!-- <center>
 	<h1><span class="red">Professional</span> Search</h1>
-</center>
+</center> -->
 
 
 <?php
-	get_search_form();
+	// get_search_form();
 
 	$s=get_search_query();
 	$args = array('post_type' => ['post', 'bilevel_code'],
