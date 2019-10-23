@@ -52,7 +52,7 @@
                 </div>
                 <div id="menu-wraper">
                     <div class="seach-top-box">
-                        <form method="get">
+                        <form method="get" action="/">
                             <input type="text" value="<?php echo get_search_query(); ?>" placeholder="Search" name="s">
                             <button><i class="fa fa-search"></i></button>
                         </form>
