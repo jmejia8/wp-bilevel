@@ -2,7 +2,6 @@
     margin: 0;
     /*padding: 0;*/
     text-decoration: none;
-    color: black;/*#82BBD1;*/
     box-sizing: border-box;
     font-size: 12pt;
     /*============================*/
@@ -121,9 +120,6 @@ div.band .wrap h1{
 /*header*/
 header.main{
     background: #0A61A3;
-    -webkit-box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
-    -moz-box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
-    box-shadow: -2px 9px 12px -12px rgba(0,0,0,0.41);
     position: absolute;
     top: 0;
     right:  0;
@@ -226,7 +222,7 @@ nav.menu{
 
 
 .seach-top-box{
-    float: left;
+    float: right;
     margin-top: 25px;
     margin-left: 40px;
     width: 40%;
@@ -571,6 +567,13 @@ div.btn-menu-wraper{
     padding-right: 15px;
 }
 
+#menu-wraper{
+    background: #02213C;
+    -webkit-box-shadow: 13px 13px 12px -12px rgba(0,0,0,0.41);
+    -moz-box-shadow: 13px 13px 12px -12px rgba(0,0,0,0.41);
+    box-shadow: 13px 13px 12px -12px 
+}
+
 a.btn-menu{
     display: none;
     width: 50px;
@@ -604,4 +607,10 @@ hr{
 .post li{
     font-family: Libre Baskerville;
     margin-bottom: 13px;
+}
+
+.social-icons{
+    float: right;
+    margin-top: 25px;
+    margin-left: 15px;
 }

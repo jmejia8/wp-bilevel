@@ -46,6 +46,10 @@
         overflow-x: scroll;
     }
 
+    .social-icons{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -76,9 +80,17 @@
         margin-top: 250px;
     }
 
+    .social-icons{
+        display: block;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
+    .social-icons{
+        display: none;
+    }
+
     header.main{
         position: fixed;
     }
