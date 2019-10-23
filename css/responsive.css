@@ -10,7 +10,7 @@
 
     #menu-wraper{ display: block; width: 100%}
 
-    a.btn-menu{
+    a.btn-menu{hello
         display: none;
     }
 
@@ -79,6 +79,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    header.main{
+        position: fixed;
+    }
     div.content{
         margin-top: 100px;
     }
