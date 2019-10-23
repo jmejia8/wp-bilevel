@@ -47,6 +47,9 @@
                     </small>
                     </span>
                 </div>
+                <div class="social-icons">
+                     <?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?> 
+                </div>
                 <div id="menu-wraper">
                     <div class="seach-top-box">
                         <form method="get">
