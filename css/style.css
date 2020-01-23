@@ -274,8 +274,10 @@ footer{
 }
 
 .menu-wraper-bottom{
-    float: right;
-    margin-right: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*margin-right: 20px;*/
 }
 .menu-wraper-bottom li{
     display: inline-block;

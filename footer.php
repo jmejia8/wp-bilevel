@@ -7,9 +7,8 @@
                 &copy; <?php echo date("Y"); ?> Bi-level Optimization
             </b>
         </div>
-        <div class="social-icons-bottom">
-             <?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?> 
-        </div>
+
+
         <div class="menu-wraper-bottom">
         <?php
         wp_nav_menu(
