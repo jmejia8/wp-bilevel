@@ -33,7 +33,7 @@
             <div class="menu-container">
                 <div class="logo">
                     <a href="<?php echo get_site_url(); ?>">
-                    <img src="<?php bloginfo('template_url');?>/img/logo-gray-64.png" alt="logo">
+                    <img src="<?php bloginfo('template_url');?>/img/logo-gray2-64.png" alt="logo">
                     </a>
                 </div>
                 <div class="btn-menu-wraper">

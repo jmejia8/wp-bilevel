@@ -137,9 +137,9 @@ article input[type=submit]{
 }
 
 article input[type=text]:focus, textarea:focus{
-	-webkit-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.38);
-	-moz-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.38);
-	box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.38);
+	-webkit-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.1);
+	box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.1);
 }
 
 
