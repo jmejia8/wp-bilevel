@@ -266,10 +266,27 @@ nav.menu{
 
 footer{
     background: #262631;
-    height: 100px;
+    min-height: 100px;
+    padding: 20px;
     padding-top: 40px;
     text-align: center;
     color: #EFEFEF;
+}
+
+.menu-wraper-bottom{
+    float: right;
+    margin-right: 20px;
+}
+.menu-wraper-bottom li{
+    display: inline-block;
+    margin-right: 10px;
+
+}
+.menu-wraper-bottom  a{
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    font-size: 11pt;
 }
 
 /*banner*/

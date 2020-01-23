@@ -85,12 +85,21 @@
         display: block;
     }
 
+
+
 }
 
 @media screen and (max-width: 600px) {
     .social-icons{
         display: none;
     }
+
+    .comment-form{
+        width: 100%!important;
+        /*background: red;*/
+        margin: auto;
+    }
+
 
     .seach-top-box{
         float: none;
