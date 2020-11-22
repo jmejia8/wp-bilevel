@@ -101,7 +101,7 @@ endif;
         </div>
 
         <div class="center">
-            <a class="btn-light" href="#">See all</a>
+        <a class="btn-light" href="<?php echo get_site_url(); ?>/algorithms">See all</a>
         </div>
 
         <?php

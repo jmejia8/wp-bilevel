@@ -3,6 +3,9 @@
 
 
         <div class="footer-msg">
+            <p>
+            <img src="<?php echo bloginfo('template_url');  ?>/img/logo-gray-64.png" />
+            </p>
             <b>
                 &copy; <?php echo date("Y"); ?> Bi-level Optimization
             </b>

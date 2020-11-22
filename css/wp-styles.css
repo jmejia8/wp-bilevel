@@ -1,0 +1,53 @@
+figure.wp-block-image, figure.wp-block-gallery, figure.wp-block-table{
+	margin-top:20px;
+	margin-bottom:20px;
+	border:solid 1px #dfdfdf;
+	border-radius:5px;
+	padding:5px;
+}
+
+tr{
+	border:1px solid #dfdfdf;
+	background:#fefe;
+}
+
+figure figcaption{
+	display:block;
+	text-align: center;
+	width:100%;
+	padding:10px;
+}
+
+.wp-block-image img {
+    width: 100%;
+	height:auto;
+}
+
+p.has-text-align-center{
+	text-align:center;
+}
+
+blockquote{
+	background:#eee;
+	padding:20px;
+	margin-bottom:30px;
+	margin-top:30px;
+	border-left:3px gray solid;
+}
+
+blockquote p{
+	margin-bottom:10px;
+}
+
+blockquote cite{
+	padding-top:20px;
+}
+
+code{
+	overflow: scroll auto;
+	
+}
+
+div.wp-block-file{
+	text-align:center;
+}

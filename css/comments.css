@@ -169,6 +169,7 @@ img.avatar-60{
 	display: inline-block;
 	width: 10%;
 	vertical-align: middle;
+	border-radius:300%;
 }
 
 ol.comment-list{
@@ -176,7 +177,6 @@ ol.comment-list{
 	padding: 0;
 }
 .comment-meta{
-	background: rgba(0,0,0, 0.1);
 	padding: 10px;
 	font-family: 'Roboto';
 
@@ -214,12 +214,12 @@ ol.comment-list{
 }
 
 .comment-content p, .comment-content  a{
-	color: #ADF1FF;
+	color: rgb(50,50,50);
 	font-family: 'Roboto';
 
 }
 .comment-content  a{
-	color: white;
+	color: rgb(36, 120, 176);
 }
 .comment-content {
 	display: inline-block;
@@ -227,11 +227,13 @@ ol.comment-list{
 	padding: 10px;
 	width: 85%;
 
-	position: relative; background: #0F5A62; border-radius: .4em;
+	position: relative;
+	background: rgb(229, 229, 229);
+	border-radius: .4em;
 }
 
 .comment-content:after { content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 0; 
-		border: 14px solid transparent; border-right-color: #0F5A62; border-left: 0; 
+		border: 14px solid transparent; border-right-color: rgb(229, 229, 229); border-left: 0; 
 		margin-top: -14px; margin-left: -14px;
 }
 

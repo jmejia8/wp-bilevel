@@ -64,9 +64,9 @@ if ( post_password_required() ) {
 	  'id_submit'         => 'submit',
 	  'class_submit'      => 'submit btn btn-default',
 	  'name_submit'       => 'submit',
-	  'title_reply'       => __( 'Leave a Reply' ),
+	  'title_reply'       => __( 'Leave a Comment' ),
 	  'title_reply_to'    => __( 'Leave a Reply to %s' ),
-	  'cancel_reply_link' => __( 'Cancel Reply' ),
+	  'cancel_reply_link' => __( 'Cancel Comment' ),
 	  'label_submit'      => __( 'Post Comment' ),
 	  'format'            => 'xhtml',
 

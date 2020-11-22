@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php is_front_page() ? bloginfo('description') : wp_title(''); ?> | <?php bloginfo('name'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora|Roboto|Poppins" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script data-ad-client="ca-pub-9760762192179362" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url');?>/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_url');?>/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url');?>/favicon-16x16.png">
+
+
+
+
 
     <link rel="icon" href="<?php bloginfo('template_url');?>/favicon.ico" > 
 
@@ -52,7 +60,7 @@
                 </div>
                 <div id="menu-wraper">
                     <div class="seach-top-box">
-                        <form method="get" action="/">
+						<form method="get" action="<?php echo get_site_url(); ?>/">
                             <input type="text" value="<?php echo get_search_query(); ?>" placeholder="Search" name="s">
                             <button><i class="fa fa-search"></i></button>
                         </form>
